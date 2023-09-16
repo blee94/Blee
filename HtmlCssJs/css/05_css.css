@@ -1,0 +1,49 @@
+.div-hover:hover {
+    background-color: red;
+    color: yellow;
+}
+/* 마우스를 올렸을때 반응 */
+.div-active:active {
+    background-color: blue;
+    color: white;
+}
+/* 클릭했을때 반응 */
+
+.input-focus:focus {
+    background-color: yellow;
+    color: green;
+}
+/* focus되었을때 반응 */
+
+.a:visited {
+    color: red;
+}
+/* 방문한 href주소를 표시 */
+
+.fruits span:first-child{
+    color: red;
+}
+/* fruits class 중 첫번째 요소가 span'일때만'적용 */
+.fruits h3:last-child{
+    color:blue
+}
+/* fruits class 중 마지막 요소가 h3'일때만'적용 */
+
+.fruits span:nth-child(2){
+    color: brown;
+}
+/* fruits class중 n번째 요소가 span 일때만 적용*/
+
+.fruits2 span:nth-child(2n+1){
+    color: blue;
+}
+/* 연산. n=0부터 커지는 자연수 */
+
+.fruits2 span:not(.wm) {
+    background-color: aqua;
+}
+.fruits *:not(span) {
+    background-color: aqua;
+}
+/* 모두 포함할때 *사용 */
+
