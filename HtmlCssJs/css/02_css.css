@@ -1,0 +1,26 @@
+* {
+    color: red;
+}
+/* body 전체 선택자 */
+
+div {
+    background-color: ;
+}
+/* tag선택자 (모든 지정 tag에 적용) */
+
+.orange {
+    color: orange;
+}
+/* class선택자 (tag에 class로 적용가능)*/
+.bg-blue {
+    background-color: blue;
+}
+
+#red {
+    color: red;
+}
+/* id선택자 (tag에 id로 적용가능) */ 
+
+#list_1 {
+    color: blueviolet;
+}
