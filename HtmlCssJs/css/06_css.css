@@ -15,3 +15,39 @@
     background-color: yellow;
 
 }
+
+div.before-el::before {
+    content: "앞!";
+}
+/* 가상 요소 선택사 에서는 content를 꼭 사용 */
+div.after-el::after {
+    content: "hot!";
+    color: white;
+    background-color: red;
+    font-size: 12px;
+    border-radius: 2px;
+}
+div.box::before {
+    content: "택시";
+}
+div.box::after {
+    content: "빨리"
+}
+
+input[type=text] {
+    background-color:aliceblue;
+}
+
+input[disabled] {
+    background-color: red;
+}
+
+input[placeholder] {
+    background-color: orange;
+}
+input:not([placeholder]){
+    background-color: blue;
+}
+input[type=password] {
+    background-color: blue;
+}
