@@ -25,3 +25,4 @@ div .lion {
 li.lion ~ li {
     background-color: orange;
 }
+/* li tag 이면서 lion class를 선택 */

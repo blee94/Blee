@@ -10,3 +10,25 @@
 .second {
     background-color: green;
 }
+
+div .apple {
+    color: pink;
+
+}
+/* div tag안에 apple class를 선택 예시 (하위 선택자)*/
+
+div > .apple {
+
+}
+/* div tag 안에 tag들 중 apple class를 선택 (자식 선택자) */
+
+
+h1 + ul {
+    font-size: 20px;
+}
+/* h1 tag 안에 ul tag 선택(인접 형제 선택자) */
+
+h1 ~ ul {
+    font-size: 20px;
+}
+/* h1 tag 안에 모든 ul tag 선택(일반 형제 선택자) */
