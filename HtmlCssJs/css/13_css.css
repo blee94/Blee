@@ -1,0 +1,24 @@
+.box {
+    background-color: black;
+    width: 100px;
+    height: 100px;
+    color: pink;
+    margin: 10px;
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+    /* text-align: center; */
+}
+.container {
+    display: flex;
+    width: 400px;
+    height: 400px;
+    background-color: lightblue;
+    flex-wrap: wrap;
+    /* no wrap이 기본값 */
+    justify-content: center;
+    /* justify-start가 기본값 */
+    align-items: flex-end;
+    align-content: center;
+}
