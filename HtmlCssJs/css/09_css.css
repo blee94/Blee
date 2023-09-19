@@ -1,0 +1,30 @@
+img {
+    width: 200px;
+}
+.img-skew:active {
+    transform: skewX(20deg);
+    transform: skewY(45deg);
+}
+/* 단위 deg/rad/grad */
+.img-rotate:active {
+    transform: rotate(45deg);
+    /* transform: rotateY(45deg); */
+}
+.img-scale:active {
+    transform: scale(2);
+}
+/* 단위 배율 */
+.img-translate:active {
+    transform: translate(10px, 20px);
+}
+/* 기본 거리 단위 */
+.img-transform:hover {
+    transform: perspective(150px) translate(10px) scale(2) rotate(45deg) skew(10deg);
+    transition: transform 1s linear 1s;
+}
+/* 한속성은 한줄로 나열. 순서는 원근법-이동-크기-회전-기울임 */
+/* transition의 필수 요소는 "지속시간" */
+.img-rotate:active {
+    width:500px;
+    transition: 2s;
+}
