@@ -1,0 +1,64 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    height: 500px;
+    width: 500px;
+    background-color: lightgrey
+    
+}
+.item1 {
+    background-color: rgb(31, 182, 114)
+}
+.item2 {
+    background-color: blue
+}
+.item3 {
+    background-color: red;
+}
+.box {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+}
+.container2 {
+    display: flex;
+    flex-direction: row-reverse;
+    height: 500px;
+    width: 500px;
+    background-color: lightgrey
+    
+}
+.item1 {
+    background-color: rgb(31, 182, 114)
+}
+.item2 {
+    background-color: blue
+}
+.item3 {
+    background-color: red;
+}
+.box {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+}
+.container3 {
+    height: 500px;
+    width: 500px;
+    background-color: lightgrey
+    
+}
+.item1 {
+    background-color: rgb(31, 182, 114)
+}
+.item2 {
+    background-color: blue
+}
+.item3 {
+    background-color: red;
+}
+.box {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+}

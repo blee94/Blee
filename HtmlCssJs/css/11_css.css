@@ -1,0 +1,38 @@
+/* div {
+    display: block;
+} */
+/* block: div태그의 기본 속성 */
+.box {
+    background-color: black;
+    width: 100px;
+    height: 100px;
+    color: white;
+    margin: 5px;
+}
+
+.display {
+    display: flex;
+    height: 100px;
+}
+/* 인라인 요소는 width와height를 지정해도 보이지 않는다 padding은 적용되나 margin(top/bottom)은 미적용 */
+
+.d-inline-block {
+    display: inline-block;
+    padding: 20px;
+}
+/* display: inline-block특성을 사용해 인라인 요소도 다 적용가능 */
+/* inline block: inline 과 block의 특징을 합쳐놓음. 
+    inline: content의 크기만큼만 공간을 차지
+    block: width,height, margin 정상작동 */
+
+.container {
+    display: flex;
+    height: 400px;
+    flex-direction: column-reverse;
+    /* 기본값:row */
+}
+/* flex: '자식'요소들만(하위요소 아님) inline요소로 만든다 */
+
+.container2 {
+    display: flex;
+}
