@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="./08_position.css">
+    </head>
+    <body>
+        <div style="height: 500px; width: 500px; background-color: aqua;"></div>
+        <!-- <div style="position: relative;"> -->
+            <div class="box box-red"></div>
+            <div class="box box-orange"></div>
+            <div class="box box-yellow"></div>
+                <div class="sm-box box-green"></div>
+        </div>
+        <!-- 자식이 absolute일 경우 부모는 자식의 크기는 포함하지 않는다. 자식인 absolute는 relative인 부모의 영역을 기준으로 자리를 잡는다.
+             부모요소가 없을경우  body를 기준으로 한다-->
+        <div class="fixed"></div>
+        <!-- fixed는 부모와 상관없이 항상 뷰포트를 기준. 화면을 스크롤해도 따라다님(위치고정x) -->
+    </body>
+</html>

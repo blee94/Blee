@@ -1,0 +1,132 @@
+/* .container {
+    
+    width: 500px;
+    height: 500px;
+    background-color: pink;
+    position: relative;
+} */
+/* .item-1 {
+    background-color: brown;
+    position: relative;
+    width: 50px;
+    height: 50px;
+    left: 50px;
+    top: 30px;
+    color: white;
+}
+.item-2 {
+    background-color: green;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    right: 30px;
+    bottom: 100px;
+    color: white;
+}
+.item-3 {
+    background-color: blue;
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    right: 100px;
+    top: 100px;
+    color: white;
+} */
+/* .container {
+    position: relative;
+    height: 200px;
+    background-color: pink;
+}
+.item {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+}
+.red {
+    background-color: red;
+    z-index: 2; */
+    /* z값이 클수록 위로감. z값이 같으면 늦게 쓰여진게 위로감
+        부모요소는 자식요소보다 위에 표시될수는 없음*/
+/* }
+.orange {
+    background-color: orange;
+    z-index: 2;
+    top: 20px;
+    left: 20px;
+}
+.yellow {
+    background-color: yellow;
+    top: 150px;
+    left: 40px;
+    z-index: -10;
+} */
+.container {
+    position: relative;
+}
+.circle {
+    height: 100px;
+    width: 100px;
+
+}
+.c1{
+    background-color: blue;
+    position: relative;
+    border-radius: 50%;
+    left: 30px;
+
+}
+.c2 {
+    background-color: aqua;
+    position: absolute;
+    border-radius: 50%;
+    left: 90px; top: 50px;
+
+}
+.c3{
+    background-color: aquamarine;
+    position: absolute;
+    border-radius: 50%;
+    left: 130px; top: 100px;
+
+}
+.c4 {
+    background-color: skyblue;
+    position: absolute;
+    border-radius: 50%;
+    left: 190px; top: 100px;
+
+}
+.c5{
+    background-color: cadetblue;
+    position: absolute;
+    border-radius: 50%;
+    left: 250px; top: 100px;
+    z-index: 998;
+
+}
+.sc1 {
+    position: absolute;
+    background-color: white;
+    border-radius: 50%;
+    z-index: 999;
+    width: 50px;
+    height: 50px;
+    left: 15px; top: 15px;
+    
+}
+.sc2 {
+    position: absolute;
+    background-color: black;
+    border-radius: 50%;
+    z-index: 999;
+    width: 25px;
+    height: 25px;
+    left: 3px; top: 5px;
+
+}
+.grass1 {
+    width: 200px;
+    position: absolute;
+    top: 170px;
+    left: 150px;
+}
