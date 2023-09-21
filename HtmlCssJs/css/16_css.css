@@ -1,0 +1,40 @@
+.box {
+    border-radius: 50px;
+    width: 100px;
+    height: 100px;
+    background-color: lightpink;
+    position: relative;
+    animation: move 3s 0s 6;
+    /* direction: normal/reverse/alternate/alternate reverse */
+}
+@keyframes move {
+    /* from {
+        left:0px;
+    }
+
+    to {
+        left: 100px;
+    } */
+    /* from~left 방식  */
+    0% {
+        left: 0px;
+        top: 0px;
+    }
+    25% {
+        left:100px;
+        top: 0px;
+    }
+    50% {
+        left:100px;
+        top:100px;
+    }
+    75% {
+        left:0px;
+        top:100px;
+    }
+    100% {
+        left: 0px;
+        top: 0px;
+    }
+   /* %~% 방식 */
+}

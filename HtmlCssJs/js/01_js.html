@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JS 변수</title>
+    </head>
+    <body>
+        <script>
+            // 콘솔에 출력 (버그를 찾을때 사용)
+            console.log("hello");
+
+            // 팝업으로 출력(클라이언트에 안내 메세지를 표시할때 사용)
+            // alert("hello")
+
+            // 키워드(var let const) 변수이름 = 값;
+            var name = "Lee"; //선언과 할당을 동시에
+            
+
+            var name2; //변수의 선언
+            name2 = "Leee" //할당
+
+            // var: 재선언/재할당 가능
+            var name; //name이라는 변수를 재선언
+            name = "Lee2" //재할당
+            name = "Lee3" //재할당
+
+            //let: 재선언 불가/재할당은 가능
+            let name3 = "Kim";
+            name3 = "Han" //재할당o
+            // let name3; 재선언x
+
+            //const: 재선언/재할당 불가 
+            const name4 = "Park"; //선언할때 할당도 필수
+            
+            let number = 9; //숫자는 ""안해도 되지만 문자열을 항상"" 사용해야함
+
+            console.log(name, name2, name3, name4, number);
+
+            console.log( "hello", number)
+            console.log( name3 + number)
+            console.log( "hello" + number)
+            console.log(`hi ${name4} bye`)
+            
+
+            
+        </script>
+    </body>
+</html>
