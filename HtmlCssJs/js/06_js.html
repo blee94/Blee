@@ -6,6 +6,84 @@
         <title>조건문</title>
     </head>
     <body>
+        <script>
+            //--------------if문-----------
+            // /*  if(조건){
+            //      조건이 true일때 실행할 코드
+            //     else if
+            //     else: 조건이 false일때 실행할 코드
+            // }*/
+            // if (조건1) {
+            //     //조건1이 true일때 실행할 코드
+
+            // }
+            // else if(조건2){
+            //     //조건1은 false이고, 조건2가 true일때 실행할 코드
+
+            // }
+            // else {
+            //     //위의 모든 조건이 거짓일때 실행할 코드
+
+            // }
+
+            let name = "Lee"
+            if(name === "Lee" ) {
+                console.log("안녕")
+            } // 여기서 true값이 출력되면 이후의 문은 건너뛴다.
+            else if (name === "linda") {
+                console.log("안녀엉")
+            }
+            else {
+                console.log("?");
+            } // 종료 시점은 다음 if문 이전.
+
+             //if문 안에 if문이 들어갈수도있음. 첫 if문이 참이고 두번째 if문도 참이면 둘 다 출력.
+             
+             let age = "3"
+             if(age >= 20) {
+                console.log("성인")
+             }
+             else if (age >=17) {
+                console.log("고등학생")
+             }
+             else if (age >= 14) {
+                console.log("중학생")
+             }
+             else if (age >= 8) {
+                console.log("초등학생")
+             }
+             else if (age >= 0) {
+                console.log("유아")
+            }
+
+            //----------------swith문------------------
+            let alpha = "b";
+            switch (alpha) {
+                case "a":
+                    console.log("1")
+                    break; //case하나당 break하나(꼭 써야함)
+                case "b":
+                    console.log("2")
+                    break;
+                case "c":
+                    console.log("3")
+                    break;
+                default: //if문에서의 else와 같은 역활
+                    console.log("모름")
+                    break;
+            }
+
+            //-------------삼항 연산자--------------
+            //조건 ? 참일때 실행항 코드 : 거짓일때 실행할 코드
+            name == "Lee" ? console.log("안녕") : console.log("누구?")
+
+            let msg = name == "Lee" ? "안녕" : "누구?";
+            console.log(msg) //위에꺼랑 동일한 코드. 
+
+            let now = new Date().getHours();
+            let time = now < 12 ? "오전" : "오후";
+            console.log(time)
+        </script>
         
     </body>
 </html>
