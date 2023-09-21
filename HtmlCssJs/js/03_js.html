@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JS 연산자</title>
+    </head>
+    <body>
+        <script>
+            //연산자
+            //대입 연산자
+            let num1 = 5;
+            let num2 = num1;
+            
+            //---------비교 연산자----------
+            //==, ===(자료형 까지 비교)
+            console.log("80" == 80); //true
+            console.log("80" === 80); //false
+
+            // >=, >, <=, <
+            console.log(70 > 80) //false
+            console.log(90 >= 90) //true
+
+            // !=, !==
+            console.log("10" != 20) //true (10이 20과 같이 않은것을 판별)
+            console.log("80" !== 80) //true
+
+
+            //-------산술 연산자----------
+            console.log(10 + 20) // 30
+            console.log(5 * 9) // 45
+            console.log(9 / 3) // 3
+
+            console.log(10 % 2) // 0(나눴을때 나머지)
+            console.log(11 % 2) // 1
+            console.log(13 % 7 == 5) //false
+            console.log(13 % 7 == 6) //true
+
+            console.log(2**3) // 제곱
+
+            //--------논리 연산자--------
+            console.log(num1 > 4 && num1 <8) //true. and
+            console.log(num1 > 4 || num1 <1) //true. or
+            console.log(num1 != 4) //true. not(!)
+            //ex)
+            let bool = true;
+            console.log(!bool) //false.
+            let undef;
+            console.log(!undef) //false. undefined는 false로 인식
+
+            //---연산자 줄여쓰기---
+            let num0 = 10
+            num0 = num0 + 1
+            num0 += 1 //원래 자신의 값에서 추가 연산을 하고싶을때. 위의 코드와 같은 명령이.
+            console.log(num0)
+
+            //------증감 연산자-------
+            let num10 = 10;
+            console.log(++num10)
+
+            let num11 = 11, num12 = 12;
+            let result = num11++;
+            console.log(result)
+
+            let result2 = ++num12;
+            console.log(result2)
+
+            let result3 = num11--;
+            console.log(result3)
+
+            let result4 = --num12;
+            console.log(result4)
+
+
+
+
+
+
+        </script>
+    </body>
+</html>
