@@ -6,8 +6,54 @@
         <title>Dom</title>
     </head>
     <body>
+
+        <div id="box" class="box">hello</div>
+        <div id="container" class="box item">hello</div>
+        <span>hello span</span>
+        <input type="text" name="email">
+        <div id="box2"><b>HelloBox2</b></div>
+
+
         <script>
+            console.log(document.documentElement);
+            console.log(document.head);
+            console.log(document.title);
+            console.log(document.body);
+            console.log(document.URL);
+            console.log(document.domain);
+
             
+            let elById = document.getElementById("box") // 많이씀
+            console.log(elById) //값을 가져오려면 이 전에 태그가 할당되어야함.
+
+            let elByClass = document.getElementsByClassName("box") // 많이씀
+            console.log(elByClass)
+            console.log(elByClass[0]) // 인덱싱 0번
+            console.log(elByClass[1])
+            
+
+
+            let elByTag = document.getElementsByTagName("span") // 잘안씀
+            console.log(elByTag) // 그룹 전체 선택
+            console.log(elByTag[0]) // 인덱싱
+
+            let elByName = document.getElementsByName("email") // 잘안씀
+            console.log("elByName", elByName)
+            console.log(elByName[0])
+
+            // 선택자를 이용하여 요소를 선택
+            let elBySelector = document.querySelector(".box") //위에서부터 첫번째만 선택
+            let elBySelectorAll = document.querySelectorAll(".box")
+            console.log("elBySelector", elBySelector)
+            console.log("elBySelectorAll", elBySelectorAll)
+
+
+            let elBox2 = document.getElementById("box2")
+            console.log(elBox2.innerText) //텍스트만 가져옴
+            console.log(elBox2.innerHTML) // 태그도 가져옴
+
+            elBox2.innerText = "hello lee"
+            elBox2.innerHTML = "hello <b>lee</b>"
         </script>
     </body>
 </html>
