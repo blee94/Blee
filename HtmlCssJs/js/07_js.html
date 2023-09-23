@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>반복문</title>
+    </head>
+    <body>
+        <script>
+            //-----------for문-----------
+            //for(초기값; 조건문; 증감문)
+            for (let i = 0; i < 10; i++) {
+                //명령문 (반복하고 싶은 코드)
+                console.log(i, "안녕");
+            }
+            console.log("끝");
+            //----------중첩 for문-----------1
+            for (let j = 0; j < 5; j++) {
+                for (let k = 0; k < 5; k++) {
+                    //3중 for문은 만들지 않는게 좋음
+                    console.log(`j: ${j}, k: ${k}`)
+                }
+            }
+            //------------while문-----------
+            //반복할 횟수를 특정할 수 없을때 사용
+
+
+
+            let m = 0; //초기식
+            while (m < 10) { //조건
+                //조건이 true일 경우 실행할 명령문
+                console.log(m);
+                m++; //증감문 !꼭 넣어야함
+            }
+        /*
+            let number = Number(prompt("양수 입력"))
+            while(number < 0){
+                number = Number(prompt("양수 입력"))
+            }
+        */
+            // while(true) { //의도적인 무한 반복문
+            //     let number = Number(prompt("양수 입력"))
+            //     if(number < 0) break; //반복문 강제 종료 ! 꼭 필요
+            //     console.log("hello")
+            // }
+            
+            //--------continue--------
+            for(let z = 0; z < 10; z++) {
+                if(z%2 == 0) continue
+                console.log(z);
+
+                //continue가 실행되면 바로 여기로 옴. 코드는 처음부터 다시 실행
+            }
+
+            //----do while문-----
+            //while문과 동일하지만 do while은 처음 한번은 무조건 실행시킨다
+
+        /*    
+            do {
+                //명령문
+            } while()
+        */    
+
+        </script>
+    </body>
+</html>
