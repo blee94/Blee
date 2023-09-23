@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>배열</title>
+    </head>
+    <body>
+        <script>
+            let numbers = []
+            for(let a = 1; a <= 10; a++){
+                numbers.push(a)
+            }
+            console.log(numbers)
+            
+            numbers.pop()
+            console.log("pop", numbers) // 배열의 마지막 요소 없앰
+
+            numbers.shift()
+            console.log("shift", numbers) // 베열의 처음 요소 없앰
+
+            numbers.unshift(10)
+            console.log("unshift", numbers) //입력한 요소를 배열에 추가함
+
+            console.log("includes", numbers.includes(11)) //입력한 요소가 배열에 포함되어있는지 판별.
+            
+            console.log("indexOf 5", numbers.indexOf(5)) 
+            console.log("indexOf 1", numbers.indexOf(1)) 
+
+            numbers.reverse()
+            console.log("reverse", numbers)
+
+            console.log("join", numbers.join("-"))
+            console.log(["a", "p", "p", "l", "e"].join("_"))
+
+            //------문자열 관령 메서드
+
+            let str = 'Happy Birth Day!'
+            console.log(str.length) // 공백 포함하여 문자열의 길이를 반환
+
+            //Lower/UpperCase
+            //JavaScript=> .toLowerCase  => javascript 소문자만 인식할 경우 소문자로 바꿔줌.
+            console.log(str.toLowerCase())
+
+            // console.log(str.split(''))
+
+            console.log('hello'.split("").reverse().join("!"))
+
+            // 엔터: /n
+
+            console.log(str.repeat(2))
+
+
+
+            
+
+        </script>
+    </body>
+</html>
