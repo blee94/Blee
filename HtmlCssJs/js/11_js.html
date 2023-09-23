@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>객체</title>
+    </head>
+    <body>
+        <script>
+            //-------------기본/객체 자요형
+            let num = 5;
+            let num2 = num;
+            num2 += 5 ;
+            console.log(num, num2) //출력: 5 10
+            //기본 자료형: 값을 복사 (얕은 복사)
+            let arr = [1,2,3,4,5];
+            let arr2 = arr;
+            arr2.reverse()
+            console.log(arr, arr2) // 출력:[5,4,3,2,1] [5,4,3,2,1]
+            // 객체 자료형: 메모리 주소를 참조값을 저장. 배열1/2는 같은 공간을 공유하는? (깊은 복사)
+
+            let arr3 = [1,2,3,4,5];
+            let arr4 = arr3.slice();
+            arr4.reverse()
+            console.log(arr3, arr4) // 출력: [1,2,3,4,5] [5,4,3,2,1]
+
+            //-----------------Js 표준객체
+
+            let date = new Date(); // 날짜/시간 불러오기
+            console.log(date)
+
+            let date1 = new Date("2023-09-22"); // 특정 날짜 (year-month-day)
+            console.log(date1)
+
+            let date2 = new Date();
+            console.log("시간", date2.getHours())
+            console.log("년도", date2.getFullYear())
+            console.log("날짜", date2.getDate())
+            console.log("시", date2.getHours())
+            console.log("분", date2.getMinutes())
+            console.log("초", date2.getSeconds())
+
+            let expired = new Date("2023-09-30").getTime;
+            let today = new Date().getTime;
+            if(expired < today) {
+                console.log("만료일 지남");
+            } else {
+                console.log("안지남");
+            }
+        </script>
+    </body>
+</html>
