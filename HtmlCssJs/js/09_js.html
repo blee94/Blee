@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            //-----for문 배열
+            let fruits = ["apple", "bannana", "grape"]
+            for(i = 0; i <fruits.length; i++){
+                console.log(fruits[i])
+            }
+
+            //-----for of 문
+            // let 변수이름 of 배열(위에서 선언해둔 배열)
+            for(let fruit of fruits) {
+                console.log(fruit)
+            }
+
+            //-----forEach
+            //함수에 속함. 객체 내에서 선언된 함수. 배열의 원소를 순차적으로 탐색함
+            // 구조: 배열 .forEach ()
+            fruits.forEach(function(fruit, index, array) {
+                //첫번째 매개변수: 탐색된 요소
+                //두번째 매개변수: 인덱스
+                //세번째 매개변수: 배열
+                //꼭 셋 다 써야하지는 않음. 1/ 1,2/ 1,2,3 이렇게 사용가능
+                console.log(fruit)
+                console.log(index)
+                console.log(array)
+            })
+            let numbers = []
+            let sum = 0;
+            for(let a = 1; a <= 100; a++){
+                numbers.push(a)
+                //배열의 마지막에 인자로 넘어간 값(a)를 추가
+                sum += a;
+                console.log(sum)
+
+            }
+
+            for(let number of numbers) {
+                numbers.push(a)
+
+                sum += a;
+                console.log(sum)
+            }
+            numbers.forEach(function(number,index){
+                numbers.push(a)
+
+                console.log(number)
+                console.log(index)
+                sum += a;
+                console.log(sum)
+            })
+
+
+
+
+        </script>
+    </body>
+</html>
