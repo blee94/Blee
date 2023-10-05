@@ -19,8 +19,9 @@
     <body>
         <div class="box"></div>
         <script>
+            // 현재 스크롤 위치: $(window).scrollTop()
             $(window).scroll(function () {
-                if ($(document).scrollTop() > 50) {
+                if ($(document).height() - $(window).height() == $(window.scrollTop())) {
                     $(".box").css("backgroundColor", "pink");
                 } else {
                     $(".box").css("backgroundColor", "lightcyan");

@@ -3,12 +3,14 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>title>Table 연습 1 달력</title>
+        <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+        <title>title>달력</title>
+        <style></style>
     </head>
     <body>
-        <table cellpadding="50">
+        <table cellpadding="50" class="calender">
             <tr>
-                <th style="color: green" colspan="7"><h1>2019년 6월</h1></th>
+                <th style="color: green" colspan="7"><h1>2022년 7월</h1></th>
             </tr>
 
             <tr>
@@ -75,5 +77,26 @@
                 <td></td>
             </tr>
         </table>
+        <form>
+            날짜: <input type="text" id="date" /><br />
+            내용: <input type="text" id="content" /><br />
+            <button type="button" onclick="saveContent()">작성</button>
+        </form>
+        <script>
+            let date;
+            $("td").on("click", function () {
+                let day = $(this).text();
+                console.log(day);
+                $("#date").val(day);
+                date = this;
+                console.log(date);
+            });
+
+            function saveContent() {
+                let data = $("#content").val();
+                console.log(data);
+                $(date).append(data);
+            }
+        </script>
     </body>
 </html>
