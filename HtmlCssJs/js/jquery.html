@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>jQuery 이벤트 리스너</title>
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+        <script>
+            //아래 코드는 container 클래스를 가진 div태그가 로드되기 전에 실행을 함
+            console.log($(".container"));
+
+            // html,body 태그 내부까지 로드된 후 실행할 코드
+            $(document).ready(function () {
+                // body가 로드된 후 실행시키고 싶은 코드
+                console.log($(".container"));
+            });
+
+            //위의 코드와 동일함. jQuery3.0 이상부터 권장되는 방식
+            $(function () {
+                // doby가 로드된 후 실행시키고 싶은 코드
+                console.log($(".container"));
+            });
+        </script>
+        <style>
+            .container {
+                background-color: lightblue;
+                width: 200px;
+                height: 200px;
+                margin-top: 10px;
+            }
+            .container2 {
+                background-color: lightblue;
+                width: 200px;
+                height: 200px;
+                margin-top: 10px;
+            }
+            .container3 {
+                background-color: lightblue;
+                width: 200px;
+                height: 200px;
+                margin-top: 10px;
+            }
+            .container4 {
+                background-color: lightblue;
+                width: 200px;
+                height: 200px;
+                margin-top: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- 로딩 이벤트: html이 로드된 후 바로 실행 할 코드 -->
+        <div class="container"></div>
+        <div class="container2"></div>
+        <div class="container3"></div>
+        <div class="container4"></div>
+
+        <input type="password" name="pw" />
+
+        <script>
+            //화살표 함수: 정적 바인딩(부모 요소의 this를 저장함)
+            //function 함수: 동적 바인딩(호출할 때를 고려해 this를 결정)
+
+            $(".container").click(function () {
+                //원하는 동작의 익명  넣는다.
+                console.log(this); // 이벤트에 담는 요소를 this에 담는다
+                $(this).css("background-color", "lightgray");
+            });
+
+            $(".container2").mouseover(function () {
+                console.log(this);
+                $(this).css("background-color", "lightgray");
+            });
+
+            $(".container3").mouseout(function () {
+                console.log(this);
+                $(this).css("background-color", "lightgray");
+            });
+
+            $(".container4").hover(
+                function () {
+                    //마우스가 들어갔을때
+                    console.log(this);
+                    $(this).css("background-color", "lightgray");
+                },
+                function () {
+                    //마우스가 나갔을때
+                }
+            );
+
+            $(document).scroll(function () {
+                console.log(document.body.scrollHeight);
+
+                console.log("asd");
+            });
+
+            //      $("input[name=pw]").keyup(function (event) {
+            // console.log("key: ", event.key);
+            //          if (event.key == "Enter") console.log("value: ", this.value);
+            //      });
+
+            // on: 이벤트를 걸겠다
+            //      $("선택자").on("이벤트 타입", "함수");
+            $("input[name=pw]").on("keyUp", function (event) {
+                if (event.key == "Enter") console.log("value: ", this.value);
+            });
+        </script>
+    </body>
+</html>

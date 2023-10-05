@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>스크롤</title>
+        <style>
+            body {
+                height: 800px;
+            }
+            .box {
+                background-color: lightcyan;
+                width: 200px;
+                height: 200px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="box"></div>
+        <script>
+            $(window).scroll(function () {
+                if ($(document).scrollTop() > 50) {
+                    $(".box").css("backgroundColor", "pink");
+                } else {
+                    $(".box").css("backgroundColor", "lightcyan");
+                }
+            });
+        </script>
+    </body>
+</html>
