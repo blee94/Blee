@@ -1,0 +1,85 @@
+:root {
+  --nav-height-lg: 100px;
+  --nav-height-sm: 60px;
+}
+
+body {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* HEADER */
+header {
+  width: 100%;
+  height: var(--nav-height-lg);
+  z-index: 100;
+  width: 768px;
+  /* position: fixed; */
+}
+
+/* 768px 보다 클때의 header */
+header .inner {
+  background-color: lightblue;
+  height: 100%;
+  display: flex;
+}
+
+/* LOGO */
+header .inner .logo {
+  color: white;
+  font-size: 30px;
+  border: 1px solid black;
+  width: 768px;
+  height: 250px;
+  position: absolute;
+}
+
+header .inner .menu {
+  font-weight: 600;
+  display: flex;
+  top: 30px;
+  left: 270px;
+}
+
+header .inner .menu li {
+  margin: 5px;
+  position: relative;
+}
+
+/* 미디어 쿼리 작성 768px 이하일 때  */
+
+@media screen and (max-width: 768px) {
+  header {
+    background-color: rgb(153, 189, 201);
+    height: var(--nav-height-sm);
+    width: 50%;
+    z-index: 100;
+  }
+  header .inner {
+    background-color: rgb(129, 161, 172);
+    height: 100%;
+    display: flex;
+  }
+  header .inner .logo {
+    background-color: rgb(255, 255, 255);
+    border: 1px solid black;
+    height: 300px;
+    width: 100%;
+    position: absolute;
+  }
+  header .inner .menu {
+    font-weight: 600;
+    display: flex;
+    top: 30px;
+    left: 270px;
+  }
+  header .inner .menu li {
+    margin: 5px;
+    position: relative;
+  }
+}
