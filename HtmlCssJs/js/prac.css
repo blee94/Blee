@@ -1,0 +1,82 @@
+html {
+  max-width: 1000px;
+}
+
+:root {
+  --nav-height-xl: 100px;
+  --nav-height-lg: 80px;
+  --nav-height-sm: 50px;
+}
+header {
+  width: 100%;
+  height: var(--nav-height-lg);
+}
+
+header .d-flex {
+  background-color: rgb(225, 228, 240);
+  height: var(--nav-height-lg);
+  width: 100%;
+  border: 2px solid rgb(209, 212, 215);
+  justify-content: space-around;
+  align-items: center;
+}
+header .d-flex .button {
+}
+
+tr {
+}
+
+.tb {
+}
+
+input {
+  width: 300px;
+}
+
+#numb {
+  width: 50px;
+}
+
+@media screen and (max-width: 700px) {
+  header {
+    height: var(--nav-height-sm);
+  }
+  header .d-flex {
+    height: var(--nav-height-sm);
+  }
+}
+
+input {
+  width: 200px;
+}
+
+#numb {
+  width: 50px;
+}
+
+.pages {
+  display: flex;
+  justify-content: space-between;
+}
+
+.pages button {
+  margin: 10px;
+  position: absolute;
+  top: 800px;
+}
+
+.pages button #pgb {
+}
+
+.pages button #pga {
+}
+
+form button {
+  margin-left: 10px;
+}
+
+.inst {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
