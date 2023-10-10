@@ -14,3 +14,8 @@ console.log(sum, minus);
 // const { add } = require("./math");
 // const sum = math.add(5, 3);
 // console.log(sum);
+
+const math2 = require("./math");
+
+const calc = math.calc(3, 4);
+console.log(calc);
