@@ -40,3 +40,23 @@ const word2 = "xyz";
 
 const arr = [...word1, ...word2];
 console.log(arr);
+
+const obj2 = {
+  name: "blee",
+  gender: "male",
+  age: 30,
+};
+
+const obj3 = {
+  ...obj2,
+  test: "test",
+};
+console.log(obj3);
+
+const values = [10, 20, 30];
+function get(a, ...rest) {
+  console.log("a=", a);
+  console.log("rest=", rest); //남은 인자를 다시 배열로 묶어서 출력
+}
+
+get(...values);
