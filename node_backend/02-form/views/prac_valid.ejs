@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>회원가입</h1>
+    <form action="/postForm" method="post">
+      Id: <input type=" text" name="id" required minlength="5" oninput="oninputID(this)"><br />
+      Pw: <input type="password" name="pw" required oninput="oninputPw(this)" minlength="8"><br />
+      Phone: <input type="text" class="form-control" oninput="oninputPhone(this)" maxlength="14"><br />
+      Name: <input type="text" name="name" required><br />
+      성별: <label><input type="radio" name="gender" value="male" required>남</label>
+      <label><input type="radio" name="gender" value="female">여</label>
+
+      <br /><br />
+      <button type="submit">회원가입</button>
+    </form>
+    <script>
+      // 전화번호
+      function oninputPhone(target) {
+        target.value = target.value
+          .replace(/[^0-9]/g, '')
+          .replace(/(^02.{0}|^01.{1}|[0-9]{3,4})([0-9]{3,4})([0-9]{4})/g, "$1-$2-$3");
+      }
+      // 아이디
+
+
+      function oninputID(el) {
+        const value = el.value;
+
+        const regexId = /^[A-Za-z0-9]*$/;
+        if (regexId.test(value)) {
+          console.log('정규식 일치')
+        } else {
+          console.log('정규식 불일치')
+          alert('Id는 소문자와 숫자만 입력')
+        }
+      }
+      //   비밀번호
+
+      function oninputPw(el) {
+        const value = el.value;
+
+        const regexPw = /^[A-Za-z0-9-!@]+$/;
+        if (regexPw.test(value)) {
+          console.log('정규식 일치')
+        } else {
+          console.log('정규식 불일치')
+          alert('Pw는 영어 소문자, 대문자, 특수 문자(!,@)를 모두 한번이상은 사용')
+        }
+      }
+    </script>
+  </body>
+</html>
