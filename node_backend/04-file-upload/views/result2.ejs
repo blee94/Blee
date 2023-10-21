@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prac 결과창</title>
+  </head>
+  <style>
+    .container {
+      width: 250px;
+      height: 400px;
+      background-color: lightgrey;
+      border: 1px solid black;
+      border-radius: 5%;
+      display: flex;
+    }
+
+    img {
+      width: 200px;
+      height: 200px;
+      position: absolute;
+      top: 30px;
+      left: 30px;
+    }
+
+    .text {
+      position: absolute;
+      justify-content: center;
+
+    }
+
+    .text1 {
+      top: 230px;
+      left: 30px;
+    }
+
+    .text2 {
+      top: 290px;
+      left: 50px;
+    }
+
+    .text3 {
+      top: 310px;
+      left: 80px;
+    }
+
+    .text4 {
+      top: 330px;
+      left: 95px;
+    }
+  </style>
+  <body>
+    <div class=" container">
+      <img src="/<%=src%>" />
+      <h3 class="text1 text"> <%=id%>님 환영합니다!</h3>
+      <div class="text2 text"> 비밀번호: <%=pw%></div>
+      <div class="text3 text"> 이름: <%=name%></div>
+      <div class="text4 text"> 나이: <%=age%></div>
+    </div>
+  </body>
+</html>
