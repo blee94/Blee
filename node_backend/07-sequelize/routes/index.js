@@ -22,4 +22,15 @@ router.get("/visitor/:id", controller.getVisitorById);
 // 방명록 삭제
 router.delete("/visitor/:id", controller.deleteVisitor);
 
+// 회원가입 페이지
+router.get("/signup", user.signup);
+router.post("/signup", user.post_signup);
+
+router.get("/signin", user.signin);
+router.post("/signin", user.post_signin);
+
+router.post("/profile", user.profile);
+router.patch("/profile/edit/:id", user.profile_edit);
+router.delete("/profile/delete/:id", user.profile_delete);
+
 module.exports = router;
