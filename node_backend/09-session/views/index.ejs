@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로그인 세션</title>
+    <!-- <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script> -->
+    <!-- <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script> -->
+    <!-- <script type="text/javascript" src="./jquery.cookie.js"></script> -->
+    <style>
+      li {
+        list-style-type: none;
+      }
+
+      .header {
+        display: flex;
+        flex-direction: row;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h2>Codingon</h2>
+      <ul class="header">
+        <li>menu1</li>
+        <li>menu2</li>
+        <li id="login">login</li>
+        <li id="logout">logout</li>
+      </ul>
+    </header>
+    <div>
+      <h1>실습</h1>
+    </div>
+    <div id="needLogout"><%  %>님 환영합니다</div>
+    <div id="needLogin">로그인을 해주세요</div>
+    <script>
+      function loginCheck() {
+        const checkCookie = document.cookie
+        console.log(checkCookie);
+        if (checkCookie == 'value') {
+          axios({
+            method: "post",
+            url: "/"
+          }).then((res) => {
+            console.log(res.data)
+          })
+          document.getElementById('needLogin').hidden
+          document.getElementById('login').hidden
+        } else {
+          document.getElementById('needLogout').hidden
+          document.getElementById('logout').hidden
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../static/css/index.css">
+  </head>
+  <body>
+    <a href="javascript:openPop()">
+      <div>
+        팝업
+      </div>
+    </a>
+    <div class="popup_layer" id="popup_layer" style="display: none;">
+      <div class="popup_box">
+        <div style="height: 10px; width: 375px; float: top;">
+          <a href="javascript:closePop();"><img src="../static/img/ic_close.svg" class="m_header-banner-close" width="30px" height="30px"></a>
+        </div>
+        <!--팝업 컨텐츠 영역-->
+        <div class="popup_cont">
+          <h5> IE 지원 종료</h5>
+          <p>
+            인터넷 어쩌고 저쩌고
+          </p>
+
+        </div>
+
+        <div class="popup_btn" style="float: bottom; margin-top: 200px;">
+          <a href="javascript:closePop();" id="no-popup">닫기</a>
+        </div>
+        <input type="checkbox" class="saveClose" onclick="createCookie()">
+      </div>
+    </div>
+    </div>
+
+    <script>
+      //팝업 띄우기
+      function createCookie() {
+
+      }
+
+      function openPop() {
+        document.getElementById("popup_layer").style.display = "block";
+
+      }
+
+      //팝업 닫기
+      function closePop() {
+        const checkbox = document.getElementById('no-popup')
+        if (checkbox.checked) {
+          axios({
+            method: 'post',
+            url: 'set'
+          }).then((res) => {
+            console.log(res.data)
+          })
+        }
+        document.getElementById("popup_layer").style.display = "none";
+      }
+    </script>
+  </body>
+</html>
