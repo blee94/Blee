@@ -2,4 +2,6 @@
 
 SeSAC 강의
 
-- git branch test
+- git branch test 1
+
+- git branch test 2
