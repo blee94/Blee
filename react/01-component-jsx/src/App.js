@@ -41,7 +41,7 @@ function App() {
         price='13,500'
         type='자기계발서'
       ></PracPropsEx>
-      <ClassComponent text='' valid=''></ClassComponent>
+      <ClassComponent text='안녕?' valid=''></ClassComponent>
     </div>
   );
 }
