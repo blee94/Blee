@@ -2,8 +2,8 @@ import { useState, useEffect } from 'react';
 import {
   useNavigate,
   useParams,
-  useSearchParams,
-  Link,
+  //   useSearchParams,
+  //   Link,
 } from 'react-router-dom';
 
 export default function PhotoPage() {
