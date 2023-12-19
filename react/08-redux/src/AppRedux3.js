@@ -3,7 +3,6 @@ import './App.css';
 import { increase } from './store/counterReducer';
 import { decrease } from './store/counterReducer';
 import { Box1Container } from './containers/BoxesContainer';
-import { BankBoxContainer } from './containers/BoxesContainer';
 
 // containers 폴더
 // redux store에 직접적으로 접근하는 컴포넌트를 모아두기 위해서.
@@ -11,14 +10,6 @@ import { BankBoxContainer } from './containers/BoxesContainer';
 // components 폴더
 // 보통 presentational 컴포넌트만 저장
 // redux store에 직접적으로 접근하지 않는 컴포넌트만 모아둠.
-
-function Bank() {
-  return (
-    <div>
-      <BankBoxContainer />
-    </div>
-  );
-}
 
 // function Box1(props) {
 //   const number = useSelector((state) => state.counter.number);
